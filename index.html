@@ -130,10 +130,10 @@
                         <div class="text-slate-200 text-base sm:text-lg font-semibold mb-1">¿Conoces las teclas rápidas del aplicativo?</div>
                         <p class="text-xs text-slate-400 mb-5">Elige una opción para continuar.</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto">
-                            <button id="btnHotkeysYes" type="button" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-orbitron font-bold text-sm tracking-wider transition shadow-lg shadow-emerald-500/20 cursor-pointer">
+                            <button id="btnHotkeysYes" type="button" onclick="document.getElementById('gamePlaySection').scrollIntoView({behavior:'smooth', block:'start'})" class="w-full py-3 rounded-xl bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-400 hover:to-emerald-500 text-slate-950 font-orbitron font-bold text-sm tracking-wider transition shadow-lg shadow-emerald-500/20 cursor-pointer">
                                 <i class="fas fa-check mr-2"></i>SÍ, LAS CONOZCO
                             </button>
-                            <button id="btnHotkeysNo" type="button" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-orbitron font-bold text-sm tracking-wider transition border border-slate-700 hover:border-sky-500/60 cursor-pointer">
+                            <button id="btnHotkeysNo" type="button" onclick="document.getElementById('hotkeyViewer').classList.remove('hidden'); document.getElementById('hotkeyQuestion').classList.add('hidden'); document.getElementById('hotkeyViewer').scrollIntoView({behavior:'smooth', block:'start'})" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 text-white font-orbitron font-bold text-sm tracking-wider transition border border-slate-700 hover:border-sky-500/60 cursor-pointer">
                                 <i class="fas fa-keyboard mr-2"></i>NO, QUIERO VERLAS
                             </button>
                         </div>
