@@ -1428,9 +1428,11 @@
         const guideModal = document.getElementById('guideModal');
         document.getElementById('guideModalBtn').addEventListener('click', () => {
             populateGuideTable();
-        setupHotkeyKnowledgeCheck();
             guideModal.classList.remove('hidden');
         });
+
+        // Hotkey knowledge check: wire the YES/NO buttons on page load.
+        setupHotkeyKnowledgeCheck();
         document.getElementById('closeGuideModalBtn').addEventListener('click', () => guideModal.classList.add('hidden'));
         document.getElementById('closeGuideModalFooterBtn').addEventListener('click', () => guideModal.classList.add('hidden'));
 
@@ -1459,9 +1461,9 @@
         if (savedPlayer) {
             syncOperatorDisplays(savedPlayer, savedAvatar);
             closeOperatorModal();
-        } else {
-            openOperatorModal();
         }
+        // La identificación del operador se solicita al intentar iniciar una partida,
+        // no al cargar el menú, para permitir primero responder la pregunta de teclas.
 
         // Ranking Modal Events
         const rankingModal = document.getElementById('rankingModal');
